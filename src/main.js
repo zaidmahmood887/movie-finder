@@ -5,12 +5,14 @@ const app = document.querySelector('#app')
 let allMovies = []
 let filteredMovies = []
 
+// favorieten ophalen, als er niks is gewoon lege array
 let favorites =
   JSON.parse(localStorage.getItem('favorites')) || []
 
 async function getMovies() {
 
   app.innerHTML = `<h1>Loading movies...</h1>`
+
   try {
 
     app.innerHTML = `
@@ -101,6 +103,10 @@ function renderPage() {
 
       <main id="movie-container"></main>
 
+      <footer>
+        gemaakt door Zaid - Advanced Web Project
+      </footer>
+
     </div>
 
   `
@@ -123,6 +129,7 @@ function renderPage() {
 
 }
 
+// films weergeven
 function displayMovies(movies) {
 
   const movieContainer =
@@ -138,6 +145,7 @@ function displayMovies(movies) {
 
   }
 
+  // max 20 anders duurt het te lang
   movieContainer.innerHTML = movies
     .slice(0, 20)
     .map(movie => `
@@ -218,6 +226,7 @@ function setupSort() {
 
     const value = event.target.value
 
+    // alfabetisch sorteren
     if (value === 'az') {
 
       filteredMovies.sort((a, b) =>
@@ -226,6 +235,7 @@ function setupSort() {
 
     }
 
+    // hoogste rating eerst
     if (value === 'rating') {
 
       filteredMovies.sort((a, b) =>
@@ -262,6 +272,7 @@ function setupGenreFilter() {
 
     } else {
 
+      // alleen films met dit genre tonen
       filteredMovies = allMovies.filter(movie =>
         movie.genres.includes(value)
       )
@@ -289,6 +300,7 @@ function setupFavorites() {
 
     button.addEventListener('click', event => {
 
+      // anders opent de modal ook
       event.stopPropagation()
 
       const movieId =
@@ -305,6 +317,7 @@ function setupFavorites() {
 
       }
 
+      // opslaan zodat het bewaard blijft na herladen
       localStorage.setItem(
         'favorites',
         JSON.stringify(favorites)
@@ -358,6 +371,7 @@ function setupTheme() {
 
 }
 
+// modal openen als je op een kaart klikt
 function setupMovieDetails() {
 
   const cards =
@@ -424,6 +438,7 @@ function setupMovieDetails() {
 
 }
 
+// animatie als kaarten in beeld komen
 function setupObserver() {
 
   const cards =
@@ -452,23 +467,5 @@ function setupObserver() {
 
 }
 
+// alles starten
 getMovies()
-const observer = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-
-      entry.target.classList.add('show')
-
-    }
-
-  })
-
-})
-
-document.querySelectorAll('.movie-card')
-  .forEach(card => observer.observe(card))
-  <footer>
-  gemaakt door Zaid - Advanced Web Project
-</footer>
