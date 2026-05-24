@@ -10,6 +10,7 @@ let favorites =
 
 async function getMovies() {
 
+  app.innerHTML = `<h1>Loading movies...</h1>`
   try {
 
     app.innerHTML = `
@@ -452,3 +453,22 @@ function setupObserver() {
 }
 
 getMovies()
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      entry.target.classList.add('show')
+
+    }
+
+  })
+
+})
+
+document.querySelectorAll('.movie-card')
+  .forEach(card => observer.observe(card))
+  <footer>
+  gemaakt door Zaid - Advanced Web Project
+</footer>
