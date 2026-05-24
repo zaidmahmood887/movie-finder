@@ -155,3 +155,9 @@ Daarnaast heb ik veel geoefend op responsive design, CSS Grid, Flexbox en het co
 # Auteur
 
 Gemaakt door Zaid voor het vak Advanced Web Development.
+
+## Screenshots
+
+![screenshot1](public/screenshots/screenshot1.png)
+![screenshot2](public/screenshots/screenshot2.png)
+![screenshot3](public/screenshots/screenshot3.png)
