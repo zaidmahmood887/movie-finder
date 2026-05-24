@@ -151,7 +151,16 @@ Met dit project heb ik beter geleerd hoe APIs werken met fetch en async/await, h
 Daarnaast heb ik veel geoefend op responsive design, CSS Grid, Flexbox en het combineren van functionaliteit met een moderne interface.
 
 ---
+---
 
+# Bronnen
+
+- TVMaze API — https://api.tvmaze.com/shows
+- Google Fonts — https://fonts.google.com/
+- Vite Documentation — https://vitejs.dev/
+- MDN Web Docs — https://developer.mozilla.org/
+
+Tijdens het maken van dit project heb ik ook gebruik gemaakt van online documentatie, tutorials en AI-tools voor debugging, styling inspiratie en uitleg van bepaalde JavaScript concepten.
 # Auteur
 
 Gemaakt door Zaid voor het vak Advanced Web Development.
