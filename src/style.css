@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#theme-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#movie-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
+  padding: 15px;
+  border-radius: 12px;
+
+  transition: 0.3s;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.movie-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-card h2 {
+  font-size: 18px;
+}
+
+.favorite-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.favorite-btn:hover {
+  opacity: 0.8;
+}
+
+.favorite-btn.active {
+  background: green;
+}
+
+.light {
+  background: #f4f4f4;
+  color: black;
+}
+
+.light .movie-card {
+  background: white;
+  color: black;
+}
+
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+
+  max-width: 700px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-modal {
+  cursor: pointer;
+  font-size: 24px;
+  float: right;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: crimson;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+  }
+
+}
