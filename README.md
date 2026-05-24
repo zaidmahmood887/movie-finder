@@ -109,6 +109,25 @@ movie-finder/
 - JSON verwerken via `response.json()`
 - TVMaze API integratie
 
+# AI-log
+ChatGPT
+
+Gebruikt voor:
+
+hulp bij debugging van JavaScript fouten
+uitleg over async/await en fetch
+kleine hulp bij responsive CSS problemen
+feedback op de structuur van de README
+Claude
+
+Gebruikt voor:
+
+enkele suggesties voor UI styling en layout
+hulp bij het verbeteren van bepaalde CSS effecten
+
+Alle code werd zelf getest, aangepast en geïntegreerd in het project.
+
+
 ## LocalStorage
 
 Gebruikt voor:
@@ -164,6 +183,7 @@ Tijdens het maken van dit project heb ik ook gebruik gemaakt van online document
 # Auteur
 
 Gemaakt door Zaid voor het vak Advanced Web Development.
+
 
 ## Screenshots
 
